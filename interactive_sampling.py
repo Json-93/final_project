@@ -33,7 +33,7 @@ freq = np.fft.fftshift(freq)
 
 # display the signal and spectrum
 fig, ax = plt.subplots(2)
-line0, = ax[0].plot(n, y2, use_line_collection= True)
+line0, = ax[0].plot(n, y2)
 ax[0].set_xlabel('Time')
 fig.subplots_adjust(left= 0.25, bottom= 0.25)
 
