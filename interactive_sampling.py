@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Slider, Button
-from scipy.fft  import fft, fftfreq, fftshift
 
 # Input signal configuration
 def signal(t, f):
@@ -34,7 +33,7 @@ freq = np.fft.fftshift(freq)
 
 # display the signal and spectrum
 fig, ax = plt.subplots(2)
-line0, = ax[0].stem(x, y1)
+line0, = ax[0].plot(n, y2, use_line_collection= True)
 ax[0].set_xlabel('Time')
 fig.subplots_adjust(left= 0.25, bottom= 0.25)
 
@@ -67,6 +66,7 @@ def update1(val):
 
     fig.canvas.draw_idle()
 
+samplingrate_slider.on_changed(update1)
 
 def update2(val):
     s_rate = val # Hz. Here is the sampling rate.
