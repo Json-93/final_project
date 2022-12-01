@@ -9,7 +9,7 @@ def signal(t, f):
     t : time
     """
 
-    fn = np.sin(2 * np.pi * f * t)
+    fn = np.cos(2 * np.pi * f * t)
 
     return fn
 
@@ -24,16 +24,17 @@ nT = n * T
 y2 = signal(nT, f)
 
 
-# Sampling part
+# Sampling
+# part
 dt = 0.001
-t = np.arange(0, 1, dt)
-yf = np.fft.fft(y2, len(t))
-freq = np.fft.fftfreq(t.size, d= dt)
-freq = np.fft.fftshift(freq)
+yf = np.fft.fft(y2)
+freq = np.fft.fftfreq(n.size)
+# freq = np.fft.fftshift(freq)
 
 # display the signal and spectrum
 fig, ax = plt.subplots(2)
-line0, = ax[0].plot(n, y2)
+line0, = ax[0].plot(x, y1, 'red')
+line1, = ax[0].plot(nT, y2, '.')
 ax[0].set_xlabel('Time')
 fig.subplots_adjust(left= 0.25, bottom= 0.25)
 
@@ -47,7 +48,7 @@ fig.subplots_adjust(left= 0.25, bottom= 0.25)
 axsmaplingrate = fig.add_axes([0.25, 0.1, 0.65, 0.03])
 samplingrate_slider = Slider(
     ax = axsmaplingrate,
-    label= 'Sampling rate',
+    label= 'S_rate',
     valmin= 10,
     valmax= 200,
     valinit= s_rate,
@@ -57,12 +58,12 @@ samplingrate_slider = Slider(
 def update1(val):
     s_rate = val # Hz. Here is the sampling rate.
     T = 1 / s_rate
-    n = np.arange(0, 0.5 / T)
+    n = np.arange(0, 1 / T)
     nT = n * T
     y2 = signal(nT, f)
 
-    line0.set_xdata(n)
-    line0.set_ydata(y2)
+    line1.set_xdata(nT)
+    line1.set_ydata(y2)
 
     fig.canvas.draw_idle()
 
@@ -71,15 +72,14 @@ samplingrate_slider.on_changed(update1)
 def update2(val):
     s_rate = val # Hz. Here is the sampling rate.
     T = 1 / s_rate
-    n = np.arange(0, 0.5 / T)
+    n = np.arange(0, 1 / T)
     nT = n * T
     y2 = signal(nT, f)
 
-    dt = 0.001
-    t = np.arange(0, 1, dt)
-    yf = np.fft.fft(y2, len(t))
-    freq = np.fft.fftfreq(t.size, d= dt)
-    freq = np.fft.fftshift(freq)
+    
+    yf = np.fft.fft(y2)
+    freq = np.fft.fftfreq(n.size)
+    # freq = np.fft.fftshift(freq)
 
     line2.set_xdata(freq)
     line2.set_ydata(yf.imag)
@@ -97,5 +97,8 @@ def reset(event):
     samplingrate_slider.reset()
 
 button.on_clicked(reset)
+
+plt.show()
+
 
 plt.show()
