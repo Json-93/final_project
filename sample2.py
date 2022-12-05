@@ -19,6 +19,9 @@ for i in range(0, 200, 1):
     nT = n * T
     x2 = np.sin(2 * np.pi * f * nT) # Since for sampling t = nT.
 
+    freq = np.fft.fftfreq(nT.size)
+    freq = np.fft.fftshift(freq)
+    x2fft = np.fft.fft(x2)
     
     
     plt.suptitle("Sampling a Sine Wave of Fmax=20Hz with fs=35Hz", fontsize=20)
@@ -29,8 +32,14 @@ for i in range(0, 200, 1):
     plt.ylabel('Amplitude', fontsize=15)
     plt.legend(fontsize=10, loc='upper right')
 
+    # plt.subplot(2, 2, 2)
+    # plt.plot(nT, x2, 'ro', label=f'fs= {s_rate} Hz')
+    # plt.xlabel('time.', fontsize=15)
+    # plt.ylabel('Amplitude', fontsize=15)
+    # plt.legend(fontsize=10, loc='upper right')
+
     plt.subplot(2, 2, 2)
-    plt.plot(nT, x2, 'ro', label=f'fs= {s_rate} Hz')
+    plt.plot(freq, x2fft, label=f'fs= {s_rate} Hz')
     plt.xlabel('time.', fontsize=15)
     plt.ylabel('Amplitude', fontsize=15)
     plt.legend(fontsize=10, loc='upper right')
