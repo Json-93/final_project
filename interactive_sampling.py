@@ -28,8 +28,8 @@ y2 = signal(nT, f)
 # part
 dt = 0.001
 yf = np.fft.fft(y2)
-freq = np.fft.fftfreq(n.size)
-# freq = np.fft.fftshift(freq)
+freq = np.fft.fftfreq(nT.size)
+freq = np.fft.fftshift(freq)
 
 # display the signal and spectrum
 fig, ax = plt.subplots(2)
@@ -40,7 +40,7 @@ fig.subplots_adjust(left= 0.25, bottom= 0.25)
 
 line2, = ax[1].plot(freq, yf.imag)
 ax[1].set_xlabel('Frequency')
-ax[1].set_ylim(-50, 50)
+ax[1].set_ylim(-10, 100)
 fig.subplots_adjust(left= 0.25, bottom= 0.25)
 
 
@@ -78,11 +78,11 @@ def update2(val):
 
     
     yf = np.fft.fft(y2)
-    freq = np.fft.fftfreq(n.size)
-    # freq = np.fft.fftshift(freq)
+    freq = np.fft.fftfreq(nT.size)
+    freq = np.fft.fftshift(freq)
 
     line2.set_xdata(freq)
-    line2.set_ydata(yf.imag)
+    line2.set_ydata(yf)
 
     fig.canvas.draw_idle()
 
