@@ -14,21 +14,21 @@ def signal(t, f):
     return fn
 
 f = 20 # Hz
-x = np.linspace(0, 0.5, 200)
+x = np.linspace(-1, 1, 500)
 y1 = signal(x, f)
 
 s_rate = 35 # Hz. Here is the sampling rate.
 T = 1 / s_rate
-n = np.arange(0, 0.5 / T)
+n = np.arange(-s_rate, s_rate)
 nT = n * T
 y2 = signal(nT, f)
 
 
 # Sampling
 # part
-dt = 0.001
+dt = 0.005
 yf = np.fft.fft(y2)
-freq = np.fft.fftfreq(nT.size)
+freq = np.fft.fftfreq(nT.size, d= dt)
 freq = np.fft.fftshift(freq)
 
 # display the signal and spectrum
@@ -58,7 +58,7 @@ samplingrate_slider = Slider(
 def update1(val):
     s_rate = val # Hz. Here is the sampling rate.
     T = 1 / s_rate
-    n = np.arange(0, 1 / T)
+    n = np.arange(-s_rate, s_rate)
     nT = n * T
     y2 = signal(nT, f)
 
@@ -72,13 +72,13 @@ samplingrate_slider.on_changed(update1)
 def update2(val):
     s_rate = val # Hz. Here is the sampling rate.
     T = 1 / s_rate
-    n = np.arange(0, 1 / T)
+    n = np.arange(-s_rate, s_rate)
     nT = n * T
     y2 = signal(nT, f)
 
     
     yf = np.fft.fft(y2)
-    freq = np.fft.fftfreq(nT.size)
+    freq = np.fft.fftfreq(nT.size, d= dt)
     freq = np.fft.fftshift(freq)
 
     line2.set_xdata(freq)
