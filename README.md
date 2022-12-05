@@ -55,10 +55,10 @@ $$G(f) = \frac{1}{2W} \sum_{n = \infty}^{\infty} g\Bigl(\frac{n}{2W}\Bigl) \ exp
 
 ## Reconstruction the signal of $g(t)$
 
-
-$$g(t) &= \int_{-\infty}^{\infty} G(f) \ exp(j 2 \pi f t) \ df \\
-    &= \int_{-W}^{W} \frac{1}{2W} \sum_{n = \infty}^{\infty} g\Bigl(\frac{n}{2W}\Bigl) \ exp\Bigl(\frac{-j \pi n f}{W} \Bigl)$$
-
+$$\begin{align}
+g(t) &= \int_{-\infty}^{\infty} G(f) \ exp(j 2 \pi f t) \ df \\
+&= \int_{-W}^{W} \frac{1}{2W} \sum_{n = \infty}^{\infty} g\Bigl(\frac{n}{2W}\Bigl) \ exp\Bigl(\frac{-j \pi n f}{W} \Bigl)
+\end{align}$$
 
 *&nbsp; Interchanging the order of summation and integration*
 
