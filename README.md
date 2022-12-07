@@ -79,10 +79,12 @@ $$
 
 ## Reconstruction the signal of $g(t)$
 
+$$
 \begin{align}
 g(t) &= \int_{-\infty}^{\infty} G(f) \ exp(j 2 \pi f t) \ df \\
 &= \int_{-W}^{W} \frac{1}{2W} \sum_{n = \infty}^{\infty} g\Bigl(\frac{n}{2W}\Bigl) \ exp\Bigl(\frac{-j \pi n f}{W} \Bigl) \tag{12}
 \end{align}
+$$
 
 *&nbsp; Interchanging the order of summation and integration*
 
@@ -92,10 +94,12 @@ $$
 
 *&nbsp; Then,*
 
+$$
 \begin{align}
-g(t) &= \sum_{n = \infty}^{\infty} g\Bigl(\frac{n}{2W}\Bigl) \ \frac{\sin{2 \pi W t}}{2 \pi W t - n \pi} \\
-&= \sum_{n = \infty}^{\infty} g\Bigl(\frac{n}{2W}\Bigl) \ sinc(2Wt-n) \ , \ -\infty < t < \infty \tag{14}
+    g(t) &= \sum_{n = \infty}^{\infty} g\Bigl(\frac{n}{2W}\Bigl) \ \frac{\sin{2 \pi W t}}{2 \pi W t - n \pi} \\
+    &= \sum_{n = \infty}^{\infty} g\Bigl(\frac{n}{2W}\Bigl) \ sinc(2Wt-n) \ , \ -\infty < t < \infty \tag{14}
 \end{align}
+$$
 
 *&nbsp; Eq.(14) provides an interpolation formula for reconstructing the original signal from the sequence of sample values $g(\frac{n}{2W})$, with the $sinc(2Wt)$ playing the role of an interpolation function.*
 
