@@ -2,7 +2,6 @@
 This is the practice of Fourier series and Fourier transform.
 
 ### Table of Contents:
-- [Table of Contents:](#table-of-contents)
 - [Some packages we use](#some-packages-we-use)
 - [Usage](#usage)
 - [Reference](#reference)
