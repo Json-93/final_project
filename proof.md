@@ -19,7 +19,9 @@ $$
 
 ## Sampling Theorem
 
-![sampling](https://github.com/Json-93/final_project/blob/main/img/sampling.jpg)
+<p align="center">
+  <img src= "https://github.com/Json-93/final_project/blob/main/img/sampling.jpg">
+</p>
 
 $$
 g_{\delta}(t) = g(t) * \sum_{n = \infty}^{\infty} \delta(t-nT_{s}) = \sum_{n = \infty}^{\infty}g(nT_{s}) \ \delta(t-nT_{s}) \tag{3}
@@ -53,7 +55,9 @@ $$
 1. $G(f) = 0$ for $|f| \geq W$ (band-limited signal)
 2. $f_{s} = 2W$ or $T_{s} = \frac{1}{2W}$
 
-![sampling_f](https://github.com/Json-93/final_project/blob/main/img/sampling_f.jpg)
+<p align="center">
+  <img src= "https://github.com/Json-93/final_project/blob/main/img/sampling_f.jpg">
+</p>
 
 *&nbsp; Then,*
 
@@ -113,3 +117,6 @@ $$
 *&nbsp; Any impulse response that plays the same roles as $sinc(2Wt)$ is also referred to as a reconstruction filter.*
 
 *&nbsp; The sampling rate of $2W$ samples per second, for a signal bandwidth of $W$ Hz, is called the Nyquist rate; its reciprocal $\frac{1}{2W}$ (measured in seconds) is called __Nyquist interval__.*
+
+
+
