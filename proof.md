@@ -19,6 +19,7 @@ $$
 
 ## Sampling Theorem
 
+![sampling](https://github.com/Json-93/final_project/blob/main/img/sampling.jpg)
 
 $$
 g_{\delta}(t) = g(t) * \sum_{n = \infty}^{\infty} \delta(t-nT_{s}) = \sum_{n = \infty}^{\infty}g(nT_{s}) \ \delta(t-nT_{s}) \tag{3}
@@ -52,6 +53,8 @@ $$
 1. $G(f) = 0$ for $|f| \geq W$ (band-limited signal)
 2. $f_{s} = 2W$ or $T_{s} = \frac{1}{2W}$
 
+![sampling_f](https://github.com/Json-93/final_project/blob/main/img/sampling_f.jpg)
+
 *&nbsp; Then,*
 
 $$
@@ -78,6 +81,8 @@ $$
 *&nbsp; Therefore, if the sample values of a signal g(t) are specified for all time, then the Fourier transform $G(f)$ of the signal is uniquely determined by using the discrete time Fourier transform. In the other words, the sequence $g(\frac{n}{2W})$ has all the information contained in $g(t)$.*
 
 ## Reconstruction the signal of $g(t)$
+
+*&nbsp; Reconstrct a signal is to do inverse Fourier transform.*
 
 $$
 \begin{align}
