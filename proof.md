@@ -24,32 +24,32 @@ $$
 </p>
 
 $$
-g_{\delta}(t) = g(t) \times \sum_{n = \infty}^{\infty} \delta(t-nT_{s}) = \sum_{n = \infty}^{\infty}g(nT_{s}) \ \delta(t-nT_{s}) \tag{3}
+g_{\delta}(t) = g(t) \times \sum_{n = -\infty}^{\infty} \delta(t-nT_{s}) = \sum_{n = -\infty}^{\infty}g(nT_{s}) \ \delta(t-nT_{s}) \tag{3}
 $$
 
 *&nbsp; Using 2 equation below.*
 
 $$
-\sum_{m = \infty}^{\infty} g(t-mT_{0}) \rightleftharpoons f_{0} \sum_{n = \infty}^{\infty} G(nf_{0}) \ \delta(f-nf_{0}) \tag{4}
+\sum_{m = -\infty}^{\infty} g(t-mT_{0}) \rightleftharpoons f_{0} \sum_{n = -\infty}^{\infty} G(nf_{0}) \ \delta(f-nf_{0}) \tag{4}
 $$
 
 *&nbsp; Replacing $g(t-mT_{0})$ to $\delta(t-mT_{0})$*
 
 $$
-\sum_{m = \infty}^{\infty} \delta(t-mT_{0}) \rightleftharpoons f_{0} \sum_{n = \infty}^{\infty} 1 \times \ \delta(f-nf_{0}) \tag{5}
+\sum_{m = -\infty}^{\infty} \delta(t-mT_{0}) \rightleftharpoons f_{0} \sum_{n = -\infty}^{\infty} 1 \times \ \delta(f-nf_{0}) \tag{5}
 $$
 
 
 *&nbsp; We can get this equation:*
 
 $$
-g_{\delta}(t) \rightleftharpoons f_{s} \sum_{m = \infty}^{\infty} G(f-mf_{s}) \tag{6}
+g_{\delta}(t) \rightleftharpoons f_{s} \sum_{m = -\infty}^{\infty} G(f-mf_{s}) \tag{6}
 $$
 
-*&nbsp; Taking discrete time Fourier transform of both sides of equation.*
+*&nbsp; Taking discrete time Fourier transform of both sides of equation (3).*
 
 $$
-G_{\delta}(f) = \sum_{n = \infty}^{\infty} g(nT_{s}) \ exp(-j 2 \pi n f T_{s}) \tag{7}
+G_{\delta}(f) = \sum_{n = -\infty}^{\infty} g(nT_{s}) \ exp(-j 2 \pi n f T_{s}) \tag{7}
 $$
 
 *&nbsp; Hence, under the follow two conditions:*
@@ -64,7 +64,7 @@ $$
 *&nbsp; Then,*
 
 $$
-G_{\delta}(f) = \sum_{n = \infty}^{\infty} g\Bigl(\frac{n}{2W}\Bigl) \ exp\Bigl(-j 2 \pi \frac{n}{2W} f\Bigl) \tag{9}
+G_{\delta}(f) = \sum_{n = -\infty}^{\infty} g\Bigl(\frac{n}{2W}\Bigl) \ exp\Bigl(-j 2 \pi \frac{n}{2W} f\Bigl) \tag{9}
 $$
 
 $$
@@ -80,7 +80,7 @@ $$
 *&nbsp; Substituting, we may also write*
 
 $$
-G(f) = \frac{1}{2W} \sum_{n = \infty}^{\infty} g\Bigl(\frac{n}{2W}\Bigl) \ exp\Bigl(\frac{-j \pi n f}{W} \Bigl) \ , \ -W < f < W \tag{11}
+G(f) = \frac{1}{2W} \sum_{n = -\infty}^{\infty} g\Bigl(\frac{n}{2W}\Bigl) \ exp\Bigl(\frac{-j \pi n f}{W} \Bigl) \ , \ -W < f < W \tag{11}
 $$
 
 
@@ -100,15 +100,15 @@ $$
 *&nbsp; Interchanging the order of summation and integration*
 
 $$
-g(t) = \sum_{n = \infty}^{\infty}  \ g\Bigl(\frac{n}{2W}\Bigl) \ \frac{1}{2W} \int_{-W}^{W}exp\Bigr[j 2 \pi f \Bigr(t - \frac{n}{2W} \Bigr)\Bigr] \ df \tag{13}
+g(t) = \sum_{n = -\infty}^{\infty}  \ g\Bigl(\frac{n}{2W}\Bigl) \ \frac{1}{2W} \int_{-W}^{W}exp\Bigr[j 2 \pi f \Bigr(t - \frac{n}{2W} \Bigr)\Bigr] \ df \tag{13}
 $$
 
 *&nbsp; Then,*
 
 $$
 \begin{align}
-    g(t) &= \sum_{n = \infty}^{\infty} g\Bigl(\frac{n}{2W}\Bigl) \ \frac{\sin{2 \pi W t}}{2 \pi W t - n \pi} \\
-    &= \sum_{n = \infty}^{\infty} g\Bigl(\frac{n}{2W}\Bigl) \ sinc(2Wt-n) \ , \ -\infty < t < \infty \tag{14}
+    g(t) &= \sum_{n = -\infty}^{\infty} g\Bigl(\frac{n}{2W}\Bigl) \ \frac{\sin{2 \pi W t}}{2 \pi W t - n \pi} \\
+    &= \sum_{n = -\infty}^{\infty} g\Bigl(\frac{n}{2W}\Bigl) \ sinc(2Wt-n) \ , \ -\infty < t < \infty \tag{14}
 \end{align}
 $$
 
@@ -119,6 +119,3 @@ $$
 *&nbsp; Any impulse response that plays the same roles as $sinc(2Wt)$ is also referred to as a reconstruction filter.*
 
 *&nbsp; The sampling rate of $2W$ samples per second, for a signal bandwidth of $W$ Hz, is called the Nyquist rate; its reciprocal $\frac{1}{2W}$ (measured in seconds) is called __Nyquist interval__.*
-
-
-
