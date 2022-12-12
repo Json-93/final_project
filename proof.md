@@ -34,7 +34,7 @@ $$
 $$
 
 $$
-\sum_{m = \infty}^{\infty} \delta(t-mT_{0}) \rightleftharpoons f_{0} \sum_{n = \infty}^{\infty} G(nf_{0}) \ \delta(f-nf_{0}) \tag{5}
+\sum_{m = \infty}^{\infty} \delta(t-mT_{0}) \rightleftharpoons f_{0} \sum_{n = \infty}^{\infty} \ \delta(f-nf_{0}) \tag{5}
 $$
 
 
