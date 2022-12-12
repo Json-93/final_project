@@ -26,5 +26,4 @@ python natral_sampling_animation.py
 ## Reference
 1. [Signal & System](https://www.academia.edu/37486178/Signals_and_Systems_2nd_Edition_by_Oppenheim_)
 2. [Communication System](https://www.academia.edu/8837636/COMMUNICATION_SYSTEMS_5th_Edition_International_Student_Version_Space_Time_DSP_CONTENTS)
-
-## License
+3. https://ccrma.stanford.edu/~jos/mdft/mdft-python.html
