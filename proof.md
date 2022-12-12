@@ -24,7 +24,7 @@ $$
 </p>
 
 $$
-g_{\delta}(t) = g(t) * \sum_{n = \infty}^{\infty} \delta(t-nT_{s}) = \sum_{n = \infty}^{\infty}g(nT_{s}) \ \delta(t-nT_{s}) \tag{3}
+g_{\delta}(t) = g(t) x \sum_{n = \infty}^{\infty} \delta(t-nT_{s}) = \sum_{n = \infty}^{\infty}g(nT_{s}) \ \delta(t-nT_{s}) \tag{3}
 $$
 
 *&nbsp; Using 2 equation below.*
@@ -33,8 +33,10 @@ $$
 \sum_{m = \infty}^{\infty} g(t-mT_{0}) \rightleftharpoons f_{0} \sum_{n = \infty}^{\infty} G(nf_{0}) \ \delta(f-nf_{0}) \tag{4}
 $$
 
+*&nbsp; Replacing $g(t-mT_{0})$ to $\delta(t-mT_{0})$*
+
 $$
-\sum_{m = \infty}^{\infty} \delta(t-mT_{0}) \rightleftharpoons f_{0} \sum_{n = \infty}^{\infty} \ \delta(f-nf_{0}) \tag{5}
+\sum_{m = \infty}^{\infty} \delta(t-mT_{0}) \rightleftharpoons f_{0} \sum_{n = \infty}^{\infty} 1 x \ \delta(f-nf_{0}) \tag{5}
 $$
 
 
