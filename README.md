@@ -20,7 +20,7 @@ This is the practice of Fourier series and Fourier transform.
 ## Usage
 If you are using Macos or Linux, using ```python3```.
 ```python
-python natral_sampling_animation.py
+python natural_sampling_animation.py
 ```
 
 ## Reference
