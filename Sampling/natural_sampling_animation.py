@@ -2,14 +2,10 @@ import numpy as np
 from scipy import signal
 import matplotlib.pyplot as plt
 
-# N = 1024
 plt.ion()
 for fs in range(1, 100, 1):
     N = 512
     t = np.linspace(-1, 1, N)
-
-    # def rect(x):
-    #     return np.where(np.abs(x)<=0.5, 1, -1)
 
     x1 = np.sin(2*np.pi*1*t)
     x2 = 0.5 * (signal.square(fs*np.pi*t) + 1)
