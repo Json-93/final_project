@@ -68,7 +68,7 @@ G_{\delta}(f) = \sum_{n = -\infty}^{\infty} g\Bigl(\frac{n}{2W}\Bigl) \ exp\Bigl
 $$
 
 $$
-G_{\delta}(f) = f_{s}G(f) + f_{s}\sum_{m = \infty \\ m \neq 0}^{\infty} G(f-mf_{s}) \tag{10}
+G_{\delta}(f) = f_{s}G(f) + f_{s}\sum_{m = -\infty \\ m \neq 0}^{\infty} G(f-mf_{s}) \tag{10}
 $$
 
 *&nbsp; We find that*
@@ -93,7 +93,7 @@ $$
 $$
 \begin{align}
 g(t) &= \int_{-\infty}^{\infty} G(f) \ exp(j 2 \pi f t) \ df \\
-&= \int_{-W}^{W} \frac{1}{2W} \sum_{n = \infty}^{\infty} g\Bigl(\frac{n}{2W}\Bigl) \ exp\Bigl(\frac{-j \pi n f}{W} \Bigl) \tag{12}
+&= \int_{-W}^{W} \frac{1}{2W} \sum_{n = -\infty}^{\infty} g\Bigl(\frac{n}{2W}\Bigl) \ exp\Bigl(\frac{-j \pi n f}{W} \Bigl) \tag{12}
 \end{align}
 $$
 
